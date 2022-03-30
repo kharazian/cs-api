@@ -90,7 +90,7 @@ const verifyEmail = async (verifyEmailToken: any) => {
   }
 };
 
-export default {
+export {
   loginUserWithEmailAndPassword,
   logout,
   refreshAuth,
