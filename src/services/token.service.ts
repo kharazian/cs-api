@@ -5,7 +5,7 @@ import config from '../config/config';
 import userService from './user.service';
 import { Token } from '../models';
 import ApiError from '../utils/ApiError';
-const { tokenTypes } from '../config/tokens';
+import tokenTypes from '../config/tokens';
 
 /**
  * Generate token

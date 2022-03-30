@@ -1,9 +1,9 @@
 import httpStatus from 'http-status';
-import tokenService from './token.service';
-import userService from './user.service';
-import Token from '../models/token.model';
+import * as tokenService from './token.service';
+import * as userService from './user.service';
+import { Token } from '../models';
 import ApiError from '../utils/ApiError';
-import { tokenTypes } from '../config/tokens';
+import tokenTypes from '../config/tokens';
 
 /**
  * Login with username and password

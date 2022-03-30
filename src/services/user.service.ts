@@ -79,7 +79,7 @@ const deleteUserById = async (userId: any) => {
   return user;
 };
 
-module.exports = {
+export {
   createUser,
   queryUsers,
   getUserById,

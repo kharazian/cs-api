@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 import { toJSON, paginate } from './plugins';
 import { roles } from '../config/roles';
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -89,6 +89,6 @@ userSchema.pre('save', async function (next) {
 /**
  * @typedef User
  */
-const User = mongoose.model('User', userSchema);
+const User = new mongoose.Model('User', userSchema);
 
 export { User };

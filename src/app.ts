@@ -9,11 +9,11 @@ import httpStatus from 'http-status';
 import { jwtStrategy }from './config/passport';
 import mongoSanitize from 'express-mongo-sanitize';
 import { authLimiter } from './middlewares/rateLimiter';
-const routes = require('./routes/v1');
-const { errorConverter, errorHandler } = require('./middlewares/error');
-const ApiError = require('./utils/ApiError');
-const app = express();
+import routes from './routes/v1';
+import { errorConverter, errorHandler } from './middlewares/error';
+import ApiError from './utils/ApiError';
 const xss = require('xss-clean');
+const app = express();
 
 if (config.env !== 'test') {
     app.use(morgan.successHandler);
